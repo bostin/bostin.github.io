@@ -289,6 +289,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://bostin.github.io/2019/03/02/kafka01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bostin.wang">
+      <meta itemprop="description" content="Notebook">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bostin Wang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/02/kafka01/" class="post-title-link" itemprop="url">kafka01</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-02 01:18:39" itemprop="dateCreated datePublished" datetime="2019-03-02T01:18:39+08:00">2019-03-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-01 23:34:09" itemprop="dateModified" datetime="2019-04-01T23:34:09+08:00">2019-04-01</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><h3 id="broker-消息发布的中心节点。一个kafka服务器称为一个broker"><a href="#broker-消息发布的中心节点。一个kafka服务器称为一个broker" class="headerlink" title="broker: 消息发布的中心节点。一个kafka服务器称为一个broker."></a>broker: 消息发布的中心节点。一个kafka服务器称为一个broker.</h3><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li>kafka的消息是被分批写到kafka的。一个批次就是一组消息，同主题同分区。批量数据会被压缩传输。<br>意味着批次越大，单次传输的消息越多，单位时间内处理的消息也就越多，但是也就意味着单个消息的网络传输时间增加，需要的计算量增加。</li>
+<li>kafka的消费者需要至少两个线程，一个线程执行消息的消费，另一个线程执行心跳的维系（如果kafka broker在一定时间内未接收到心跳，则会认为该消费者已下线）</li>
+<li>当新的消费者加入、离开消费群组的时候，会导致消费者与分区的关联关系的重新分配以及leader节点的重新选举。在此期间，服务将会暂时不可用，直到新的leader被选举出来。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://bostin.github.io/2019/03/01/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -463,7 +622,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -471,6 +630,21 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
