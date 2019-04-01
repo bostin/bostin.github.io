@@ -97,16 +97,16 @@
 
 
   <meta name="description" content="关键词broker: 消息发布的中心节点。一个kafka服务器称为一个broker.知识点 kafka的消息是被分批写到kafka的。一个批次就是一组消息，同主题同分区。批量数据会被压缩传输。意味着批次越大，单次传输的消息越多，单位时间内处理的消息也就越多，但是也就意味着单个消息的网络传输时间增加，需要的计算量增加。 kafka的消费者需要至少两个线程，一个线程执行消息的消费，另一个线程执行心跳的">
-<meta name="keywords" content="kafka,queue">
+<meta name="keywords" content="Java,Kafka,Queue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="kafka01">
+<meta property="og:title" content="Kafka学习01">
 <meta property="og:url" content="https://bostin.github.io/2019/03/02/kafka01/index.html">
 <meta property="og:site_name" content="Bostin Wang">
 <meta property="og:description" content="关键词broker: 消息发布的中心节点。一个kafka服务器称为一个broker.知识点 kafka的消息是被分批写到kafka的。一个批次就是一组消息，同主题同分区。批量数据会被压缩传输。意味着批次越大，单次传输的消息越多，单位时间内处理的消息也就越多，但是也就意味着单个消息的网络传输时间增加，需要的计算量增加。 kafka的消费者需要至少两个线程，一个线程执行消息的消费，另一个线程执行心跳的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T15:34:09.837Z">
+<meta property="og:updated_time" content="2019-04-01T16:01:17.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kafka01">
+<meta name="twitter:title" content="Kafka学习01">
 <meta name="twitter:description" content="关键词broker: 消息发布的中心节点。一个kafka服务器称为一个broker.知识点 kafka的消息是被分批写到kafka的。一个批次就是一组消息，同主题同分区。批量数据会被压缩传输。意味着批次越大，单次传输的消息越多，单位时间内处理的消息也就越多，但是也就意味着单个消息的网络传输时间增加，需要的计算量增加。 kafka的消费者需要至少两个线程，一个线程执行消息的消费，另一个线程执行心跳的">
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>kafka01 | Bostin Wang</title>
+  <title>Kafka学习01 | Bostin Wang</title>
   
 
 
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">kafka01
+          <h1 class="post-title" itemprop="name headline">Kafka学习01
 
               
             
@@ -349,11 +349,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-01 23:34:09" itemprop="dateModified" datetime="2019-04-01T23:34:09+08:00">2019-04-01</time>
+                <time title="修改时间：2019-04-02 00:01:17" itemprop="dateModified" datetime="2019-04-02T00:01:17+08:00">2019-04-02</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kafka/" itemprop="url" rel="index"><span itemprop="name">Kafka</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -411,9 +429,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/kafka/" rel="tag"># kafka</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/queue/" rel="tag"># queue</a>
+            <a href="/tags/Kafka/" rel="tag"># Kafka</a>
+          
+            <a href="/tags/Queue/" rel="tag"># Queue</a>
           
         </div>
       
@@ -422,6 +442,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/01/jvm01/" rel="prev" title="JVM学习01">
+                JVM学习01 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -487,12 +523,29 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
               
 
               
@@ -506,7 +559,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>

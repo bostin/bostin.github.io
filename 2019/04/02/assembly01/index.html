@@ -96,24 +96,25 @@
 
 
 
-  <meta name="description" content="Notebook">
-<meta name="keywords" content="php, java, golang">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bostin Wang">
-<meta property="og:url" content="https://bostin.github.io/index.html">
+  <meta name="description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax  数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本四则">
+<meta name="keywords" content="Assembly">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编语言学习预备01">
+<meta property="og:url" content="https://bostin.github.io/2019/04/02/assembly01/index.html">
 <meta property="og:site_name" content="Bostin Wang">
-<meta property="og:description" content="Notebook">
+<meta property="og:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax  数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本四则">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-01T16:51:57.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bostin Wang">
-<meta name="twitter:description" content="Notebook">
+<meta name="twitter:title" content="汇编语言学习预备01">
+<meta name="twitter:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax  数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本四则">
 
 
 
 
 
 
-  <link rel="canonical" href="https://bostin.github.io/">
+  <link rel="canonical" href="https://bostin.github.io/2019/04/02/assembly01/">
 
 
 
@@ -123,7 +124,7 @@
   };
 </script>
 
-  <title>Bostin Wang</title>
+  <title>汇编语言学习预备01 | Bostin Wang</title>
   
 
 
@@ -171,8 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,7 +210,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -272,9 +272,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -306,10 +306,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/02/assembly01/" class="post-title-link" itemprop="url">汇编语言学习预备01</a>
+          <h1 class="post-title" itemprop="name headline">汇编语言学习预备01
+
               
             
           </h1>
@@ -391,9 +389,7 @@
       
 
       
-        
-          
-            <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
+        <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
 <li>要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可</li>
 </ol>
 <h2 id="几个常见的汇编指令"><a href="#几个常见的汇编指令" class="headerlink" title="几个常见的汇编指令"></a>几个常见的汇编指令</h2><ol>
@@ -420,8 +416,6 @@
 </ol>
 <p>If…else… 判断、for 循环、while 循环、函数调用等，都需要依靠程序转移指令，否则程序无法跳转。没有这些指令，程序不能模块化，无法被分隔为一个一个的方法，更无法通过循环来解决很多重要的问题。常见的程序转移指令包含jpm跳转、loop循环、ret等。</p>
 
-          
-        
       
     </div>
 
@@ -442,397 +436,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://bostin.github.io/2019/04/01/jvm01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bostin.wang">
-      <meta itemprop="description" content="Notebook">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bostin Wang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/01/jvm01/" class="post-title-link" itemprop="url">JVM学习01</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-01 23:59:03" itemprop="dateCreated datePublished" datetime="2019-04-01T23:59:03+08:00">2019-04-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-02 01:05:12" itemprop="dateModified" datetime="2019-04-02T01:05:12+08:00">2019-04-02</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Assembly/" rel="tag"># Assembly</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Java之父"><a href="#Java之父" class="headerlink" title="Java之父"></a>Java之父</h2><p>詹姆斯-高斯林</p>
-<h2 id="Java语言的目标"><a href="#Java语言的目标" class="headerlink" title="Java语言的目标"></a>Java语言的目标</h2><ol>
-<li>实现各个平台兼容</li>
-<li>开发者不需要关注平台的差异性</li>
-</ol>
-<h2 id="实现兼容的方式"><a href="#实现兼容的方式" class="headerlink" title="实现兼容的方式"></a>实现兼容的方式</h2><ol>
-<li>通过编译器实现兼容</li>
-<li>通过中间语言实现兼容</li>
-</ol>
-<h2 id="Java实现兼容的方式"><a href="#Java实现兼容的方式" class="headerlink" title="Java实现兼容的方式"></a>Java实现兼容的方式</h2><ol>
-<li>首先，java语言为直接面向应用开发者的高级语言</li>
-<li>接着，java语言编译生成中间语言–java字节码指令</li>
-<li>最后，java字节码指令经由java虚拟机（jvm）翻译为本地机器指令并执行</li>
-</ol>
-<h2 id="JVM的主要功能"><a href="#JVM的主要功能" class="headerlink" title="JVM的主要功能"></a>JVM的主要功能</h2><ol>
-<li>将java语言编译为本地机器指令</li>
-<li>将编译之后的机器指令进行执行</li>
-</ol>
-<h2 id="初始版本JVM执行机器码的原理"><a href="#初始版本JVM执行机器码的原理" class="headerlink" title="初始版本JVM执行机器码的原理"></a>初始版本JVM执行机器码的原理</h2><p>利用C语言函数指针语法来动态指定CS:IP段寄存器地址指向，来实现了JVM直接运行编译java字节码之后生成的本地机器指令（汇编指令）</p>
-<h2 id="JVM基础指令集"><a href="#JVM基础指令集" class="headerlink" title="JVM基础指令集"></a>JVM基础指令集</h2><ol>
-<li>数据交换指令</li>
-</ol>
-<p>JVM执行逻辑运算的主要战场是操作数栈（iinc指令除外，该指令可以直接对局部变量做运算）！无论你把数据放在堆栈中，还是放在常量池中，你要执行运算，最总JVM都会将数据传送到操作数栈中。<br>而硬件执行逻辑运算的主要战场是寄存器，不管你把数据放在数据段，还是代码段，最终CPU都会将数据传送到寄存器中。<br>逻辑运算完成之后，再把结果转移出去。</p>
-<ol start="2">
-<li>函数调用指令</li>
-</ol>
-<ol start="3">
-<li><p>运算指令集</p>
-</li>
-<li><p>控制指令集</p>
-</li>
-<li><p>对象创建与类型转换指令</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://bostin.github.io/2019/03/02/kafka01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bostin.wang">
-      <meta itemprop="description" content="Notebook">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bostin Wang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/02/kafka01/" class="post-title-link" itemprop="url">Kafka学习01</a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/04/01/jvm01/" rel="next" title="JVM学习01">
+                <i class="fa fa-chevron-left"></i> JVM学习01
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-02 01:18:39" itemprop="dateCreated datePublished" datetime="2019-03-02T01:18:39+08:00">2019-03-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-02 00:01:17" itemprop="dateModified" datetime="2019-04-02T00:01:17+08:00">2019-04-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kafka/" itemprop="url" rel="index"><span itemprop="name">Kafka</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><h3 id="broker-消息发布的中心节点。一个kafka服务器称为一个broker"><a href="#broker-消息发布的中心节点。一个kafka服务器称为一个broker" class="headerlink" title="broker: 消息发布的中心节点。一个kafka服务器称为一个broker."></a>broker: 消息发布的中心节点。一个kafka服务器称为一个broker.</h3><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
-<li>kafka的消息是被分批写到kafka的。一个批次就是一组消息，同主题同分区。批量数据会被压缩传输。<br>意味着批次越大，单次传输的消息越多，单位时间内处理的消息也就越多，但是也就意味着单个消息的网络传输时间增加，需要的计算量增加。</li>
-<li>kafka的消费者需要至少两个线程，一个线程执行消息的消费，另一个线程执行心跳的维系（如果kafka broker在一定时间内未接收到心跳，则会认为该消费者已下线）</li>
-<li>当新的消费者加入、离开消费群组的时候，会导致消费者与分区的关联关系的重新分配以及leader节点的重新选举。在此期间，服务将会暂时不可用，直到新的leader被选举出来。</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -842,14 +475,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -869,8 +503,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -952,6 +595,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">1.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个常见的汇编指令"><span class="nav-number">2.</span> <span class="nav-text">几个常见的汇编指令</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1080,6 +740,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -1090,6 +754,8 @@
   
   
 
+
+  
 
 
   
