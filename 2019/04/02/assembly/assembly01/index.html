@@ -15,7 +15,7 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-CN,default">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax  数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本四则">
+  <meta name="description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如： 12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax   数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本">
 <meta name="keywords" content="Assembly">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编语言学习预备01">
 <meta property="og:url" content="https://bostin.github.io/2019/04/02/assembly/assembly01/index.html">
 <meta property="og:site_name" content="Bostin Wang">
-<meta property="og:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax  数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本四则">
+<meta property="og:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如： 12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax   数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-04-01T16:51:57.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编语言学习预备01">
-<meta name="twitter:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax  数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本四则">
+<meta name="twitter:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如： 12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax   数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本">
 
 
 
@@ -395,18 +395,24 @@
 <h2 id="几个常见的汇编指令"><a href="#几个常见的汇编指令" class="headerlink" title="几个常见的汇编指令"></a>几个常见的汇编指令</h2><ol>
 <li>数据传送指令</li>
 </ol>
-<p>这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将自然数 1 传送到eax寄存器</span></span><br><span class="line">movl <span class="number">1</span>, %eax</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将栈顶数据弹出至eax寄存器</span></span><br><span class="line">pop %eax</span><br></pre></td></tr></table></figure></p>
+<p>这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将自然数 1 传送到eax寄存器</span></span><br><span class="line">movl <span class="number">1</span>, %eax</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将栈顶数据弹出至eax寄存器</span></span><br><span class="line">pop %eax</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>数据传送指令几乎是任何硬件系统都必须支持的指定</li>
 </ul>
 <ol start="2">
 <li>算术运算指令</li>
 </ol>
-<p>包含算术的基本四则运算、浮点运算、数学运算（正弦、反弦等）等。例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将自然数 3 与 eax 寄存器中的数累加，并将结果存储到eax中</span></span><br><span class="line">add <span class="number">3</span>, %eax</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 ebx 寄存器中的数量加 1</span></span><br><span class="line">inc %ebx</span><br></pre></td></tr></table></figure></p>
+<p>包含算术的基本四则运算、浮点运算、数学运算（正弦、反弦等）等。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将自然数 3 与 eax 寄存器中的数累加，并将结果存储到eax中</span></span><br><span class="line">add <span class="number">3</span>, %eax</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 ebx 寄存器中的数量加 1</span></span><br><span class="line">inc %ebx</span><br></pre></td></tr></table></figure>
+
 <ol start="3">
 <li>逻辑运算指令</li>
 </ol>
-<p>与、或、非、左移、右移等指令，都属于逻辑运算指令。例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 eax 中的数左移 1 个二进制位</span></span><br><span class="line">shl %eax, <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 al 寄存器中的数和操作数进行 与 操作</span></span><br><span class="line">and al, <span class="number">00111011</span>B</span><br></pre></td></tr></table></figure></p>
+<p>与、或、非、左移、右移等指令，都属于逻辑运算指令。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 eax 中的数左移 1 个二进制位</span></span><br><span class="line">shl %eax, <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 al 寄存器中的数和操作数进行 与 操作</span></span><br><span class="line">and al, <span class="number">00111011</span>B</span><br></pre></td></tr></table></figure>
+
 <ol start="4">
 <li>串指令</li>
 </ol>
@@ -649,7 +655,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
