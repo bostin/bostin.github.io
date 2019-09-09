@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如： 12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax   数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本">
-<meta name="keywords" content="Assembly">
+  <meta name="description" content="Apache与Nginx的优缺点比较nginx相对于apache的优点： 轻量级，同样起web服务，比apache占用更少的内存及资源 抗并发，nginx处理请求是异步非阻塞的，而apache则是阻塞型的，在高并发下nginx能保持低资源低消耗高性能 高度模块化的设计，编写模块相对简单 社区活跃，各种高性能模块出品迅速啊  apache相对于nginx的优点： rewrite，比nginx的rew">
+<meta name="keywords" content="Web Server,Apache,Nginx,Tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="汇编语言学习预备01">
-<meta property="og:url" content="https://bostin.github.io/2019/04/02/assembly/assembly01/index.html">
+<meta property="og:title" content="Apache VS Nginx VS Tomcat">
+<meta property="og:url" content="https://bostin.github.io/2019/09/10/web_server/apache_vs_nginx_vs_tomcat/index.html">
 <meta property="og:site_name" content="Bostin Wang">
-<meta property="og:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如： 12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax   数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本">
+<meta property="og:description" content="Apache与Nginx的优缺点比较nginx相对于apache的优点： 轻量级，同样起web服务，比apache占用更少的内存及资源 抗并发，nginx处理请求是异步非阻塞的，而apache则是阻塞型的，在高并发下nginx能保持低资源低消耗高性能 高度模块化的设计，编写模块相对简单 社区活跃，各种高性能模块出品迅速啊  apache相对于nginx的优点： rewrite，比nginx的rew">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T16:51:57.076Z">
+<meta property="og:updated_time" content="2019-09-09T16:29:54.005Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="汇编语言学习预备01">
-<meta name="twitter:description" content="开始 要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可  几个常见的汇编指令 数据传送指令  这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如： 12345// 将自然数 1 传送到eax寄存器movl 1, %eax// 将栈顶数据弹出至eax寄存器pop %eax   数据传送指令几乎是任何硬件系统都必须支持的指定   算术运算指令  包含算术的基本">
+<meta name="twitter:title" content="Apache VS Nginx VS Tomcat">
+<meta name="twitter:description" content="Apache与Nginx的优缺点比较nginx相对于apache的优点： 轻量级，同样起web服务，比apache占用更少的内存及资源 抗并发，nginx处理请求是异步非阻塞的，而apache则是阻塞型的，在高并发下nginx能保持低资源低消耗高性能 高度模块化的设计，编写模块相对简单 社区活跃，各种高性能模块出品迅速啊  apache相对于nginx的优点： rewrite，比nginx的rew">
 
 
 
 
 
 
-  <link rel="canonical" href="https://bostin.github.io/2019/04/02/assembly/assembly01/">
+  <link rel="canonical" href="https://bostin.github.io/2019/09/10/web_server/apache_vs_nginx_vs_tomcat/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>汇编语言学习预备01 | Bostin Wang</title>
+  <title>Apache VS Nginx VS Tomcat | Bostin Wang</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://bostin.github.io/2019/04/02/assembly/assembly01/">
+    <link itemprop="mainEntityOfPage" href="https://bostin.github.io/2019/09/10/web_server/apache_vs_nginx_vs_tomcat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bostin.wang">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">汇编语言学习预备01
+          <h1 class="post-title" itemprop="name headline">Apache VS Nginx VS Tomcat
 
               
             
@@ -332,7 +332,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 00:21:23 / 修改时间：00:51:57" itemprop="dateCreated datePublished" datetime="2019-04-02T00:21:23+08:00">2019-04-02</time>
+              <time title="创建时间：2019-09-10 00:23:24 / 修改时间：00:29:54" itemprop="dateCreated datePublished" datetime="2019-09-10T00:23:24+08:00">2019-09-10</time>
             
 
             
@@ -354,7 +354,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Assembly/" itemprop="url" rel="index"><span itemprop="name">Assembly</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web-Server/" itemprop="url" rel="index"><span itemprop="name">Web Server</span></a></span>
 
                 
                 
@@ -389,38 +389,33 @@
       
 
       
-        <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
-<li>要让CPU执行一段代码，只需要将CS:IP段寄存器指向到代码段入口处即可</li>
+        <h2 id="Apache与Nginx的优缺点比较"><a href="#Apache与Nginx的优缺点比较" class="headerlink" title="Apache与Nginx的优缺点比较"></a>Apache与Nginx的优缺点比较</h2><h3 id="nginx相对于apache的优点："><a href="#nginx相对于apache的优点：" class="headerlink" title="nginx相对于apache的优点："></a>nginx相对于apache的优点：</h3><ol>
+<li>轻量级，同样起web服务，比apache占用更少的内存及资源</li>
+<li>抗并发，nginx处理请求是异步非阻塞的，而apache则是阻塞型的，在高并发下nginx能保持低资源低消耗高性能</li>
+<li>高度模块化的设计，编写模块相对简单</li>
+<li>社区活跃，各种高性能模块出品迅速啊</li>
 </ol>
-<h2 id="几个常见的汇编指令"><a href="#几个常见的汇编指令" class="headerlink" title="几个常见的汇编指令"></a>几个常见的汇编指令</h2><ol>
-<li>数据传送指令</li>
+<h3 id="apache相对于nginx的优点："><a href="#apache相对于nginx的优点：" class="headerlink" title="apache相对于nginx的优点："></a>apache相对于nginx的优点：</h3><ol>
+<li>rewrite，比nginx的rewrite强大</li>
+<li>模块超多，基本想到的都可以找到</li>
+<li>bug少，nginx的bug相对较多</li>
 </ol>
-<p>这些指令主要在寄存器与内存、寄存器与输入/输出端口之间传送数据，例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将自然数 1 传送到eax寄存器</span></span><br><span class="line">movl <span class="number">1</span>, %eax</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将栈顶数据弹出至eax寄存器</span></span><br><span class="line">pop %eax</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>数据传送指令几乎是任何硬件系统都必须支持的指定</li>
-</ul>
-<ol start="2">
-<li>算术运算指令</li>
+<h2 id="作为-Web-服务器：相比-Apache，Nginx-使用更少的资源，支持更多的并发连接，体现更高的效率，这点使-Nginx-尤其受到虚拟主机提供商的欢迎。在连接高并发的情况下，Nginx是不错的选择，能够支持高达-50000-个并发连接数的响应。"><a href="#作为-Web-服务器：相比-Apache，Nginx-使用更少的资源，支持更多的并发连接，体现更高的效率，这点使-Nginx-尤其受到虚拟主机提供商的欢迎。在连接高并发的情况下，Nginx是不错的选择，能够支持高达-50000-个并发连接数的响应。" class="headerlink" title="作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。在连接高并发的情况下，Nginx是不错的选择，能够支持高达 50000 个并发连接数的响应。"></a>作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。在连接高并发的情况下，Nginx是不错的选择，能够支持高达 50000 个并发连接数的响应。</h2><ol>
+<li>Nginx作为负载均衡服务：Nginx 既可以在内部直接支持 Rails 和 PHP 程序对外进行服务，也可以支持作为HTTP代理服务对外进行服务。</li>
+<li>Nginx是一个安装非常的简单, 配置文件非常简洁（还能够支持perl语法, Bugs 非常少的服务器: Nginx 启动特别容易, 并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动. 你还能够不间断服务的情况下进行软件版本的升级.</li>
 </ol>
-<p>包含算术的基本四则运算、浮点运算、数学运算（正弦、反弦等）等。例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将自然数 3 与 eax 寄存器中的数累加，并将结果存储到eax中</span></span><br><span class="line">add <span class="number">3</span>, %eax</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 ebx 寄存器中的数量加 1</span></span><br><span class="line">inc %ebx</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>逻辑运算指令</li>
+<h2 id="Nginx-配置简洁-Apache-复杂"><a href="#Nginx-配置简洁-Apache-复杂" class="headerlink" title="Nginx 配置简洁, Apache 复杂"></a>Nginx 配置简洁, Apache 复杂</h2><ol>
+<li>Nginx静态处理性能比Apache高3倍以上</li>
+<li>Apache对PHP支持比较简单，Nginx需要配合其他后端用</li>
+<li>Apache的组件比Nginx多</li>
+<li>现在Nginx才是Web服务器的首选</li>
 </ol>
-<p>与、或、非、左移、右移等指令，都属于逻辑运算指令。例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将 eax 中的数左移 1 个二进制位</span></span><br><span class="line">shl %eax, <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 al 寄存器中的数和操作数进行 与 操作</span></span><br><span class="line">and al, <span class="number">00111011</span>B</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>串指令</li>
+<h2 id="最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程"><a href="#最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程" class="headerlink" title="最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程"></a>最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程</h2><h2 id="nginx处理静态文件好-耗费内存少-但无疑apache仍然是目前的主流-有很多丰富的特性-所以还需要搭配着来-当然如果能确定nginx就适合需求-那么使用nginx会是更经济的方式"><a href="#nginx处理静态文件好-耗费内存少-但无疑apache仍然是目前的主流-有很多丰富的特性-所以还需要搭配着来-当然如果能确定nginx就适合需求-那么使用nginx会是更经济的方式" class="headerlink" title="nginx处理静态文件好,耗费内存少. 但无疑apache仍然是目前的主流,有很多丰富的特性. 所以还需要搭配着来. 当然如果能确定nginx就适合需求,那么使用nginx会是更经济的方式."></a>nginx处理静态文件好,耗费内存少. 但无疑apache仍然是目前的主流,有很多丰富的特性. 所以还需要搭配着来. 当然如果能确定nginx就适合需求,那么使用nginx会是更经济的方式.</h2><ol>
+<li>Apache与Tomcat都是Apache开源组织开发的用于处理HTTP服务的项目，两者都是免费的，都可以做为独立的Web服务器运行。</li>
+<li>Apache是Web服务器而Tomcat是Java应用服务器。</li>
+<li>Apache服务器只处理静态HTML</li>
+<li>tomcat服务器静态HTML、动态JSPServlet都能处理</li>
 </ol>
-<p>连续空间分配，连续空间取值，传送等，都要使用串指令。很多高级编程语言都支持字符串运算，如果硬件没有串指令，不敢想象计算机的世界会成什么样。</p>
-<ol start="5">
-<li>程序转移指令</li>
-</ol>
-<p>If…else… 判断、for 循环、while 循环、函数调用等，都需要依靠程序转移指令，否则程序无法跳转。没有这些指令，程序不能模块化，无法被分隔为一个一个的方法，更无法通过循环来解决很多重要的问题。常见的程序转移指令包含jpm跳转、loop循环、ret等。</p>
 
       
     </div>
@@ -444,7 +439,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Assembly/" rel="tag"># Assembly</a>
+            <a href="/tags/Web-Server/" rel="tag"># Web Server</a>
+          
+            <a href="/tags/Apache/" rel="tag"># Apache</a>
+          
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+          
+            <a href="/tags/Tomcat/" rel="tag"># Tomcat</a>
           
         </div>
       
@@ -457,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/01/jvm/jvm01/" rel="next" title="JVM学习01">
-                <i class="fa fa-chevron-left"></i> JVM学习01
+              <a href="/2019/09/05/kafka/kafka02/" rel="next" title="kafka02">
+                <i class="fa fa-chevron-left"></i> kafka02
               </a>
             
           </div>
@@ -466,10 +467,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/05/kafka/kafka02/" rel="prev" title="kafka02">
-                kafka02 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -627,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">1.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个常见的汇编指令"><span class="nav-number">2.</span> <span class="nav-text">几个常见的汇编指令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache与Nginx的优缺点比较"><span class="nav-number">1.</span> <span class="nav-text">Apache与Nginx的优缺点比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx相对于apache的优点："><span class="nav-number">1.1.</span> <span class="nav-text">nginx相对于apache的优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apache相对于nginx的优点："><span class="nav-number">1.2.</span> <span class="nav-text">apache相对于nginx的优点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作为-Web-服务器：相比-Apache，Nginx-使用更少的资源，支持更多的并发连接，体现更高的效率，这点使-Nginx-尤其受到虚拟主机提供商的欢迎。在连接高并发的情况下，Nginx是不错的选择，能够支持高达-50000-个并发连接数的响应。"><span class="nav-number">2.</span> <span class="nav-text">作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。在连接高并发的情况下，Nginx是不错的选择，能够支持高达 50000 个并发连接数的响应。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-配置简洁-Apache-复杂"><span class="nav-number">3.</span> <span class="nav-text">Nginx 配置简洁, Apache 复杂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程"><span class="nav-number">4.</span> <span class="nav-text">最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx处理静态文件好-耗费内存少-但无疑apache仍然是目前的主流-有很多丰富的特性-所以还需要搭配着来-当然如果能确定nginx就适合需求-那么使用nginx会是更经济的方式"><span class="nav-number">5.</span> <span class="nav-text">nginx处理静态文件好,耗费内存少. 但无疑apache仍然是目前的主流,有很多丰富的特性. 所以还需要搭配着来. 当然如果能确定nginx就适合需求,那么使用nginx会是更经济的方式.</span></a></li></ol></div>
             
 
           </div>
